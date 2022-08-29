@@ -1,0 +1,17 @@
+/* patch.hoc
+   v. 1.2 10/19/2001 NTC
+ */
+
+// make graphical interface tools available to this program
+//load_file("nrngui.hoc")
+load_file(sample_neuron.py)
+
+// specify the properties of the model cell
+create soma    // model topology
+access soma    // default section = soma
+
+soma {
+   diam = 10  // soma dimensions in um
+   L = 10/PI   //   surface area = 100 um^
+   insert hh   // Hodgkin-Huxley Na, K and leak
+}
